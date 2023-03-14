@@ -14,10 +14,30 @@
 </head>
 
     <body>
-    <!-- Remove this line the first time you edit this file -->
-     This is the index page of your Django app!
     <!--Add a nav bar here -->
-
+    <ul class="nav">
+        <li class="nav-item"><p class="nav-link">Dealership Review</p></li>
+        <div class="ml-auto d-flex">
+            {% if user.is_authenticated %}
+            <li class="nav-item d-flex">
+                <a class="btn btn-link" href="#">{{ user.first_name }}({{ user.username }})</a>
+                <a class="btn btn-link" >Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item d-flex">
+                <input class="form-control" type="text"/>
+                <input class="form-control" type="password"/>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign up</a>
+              </li>
+            {% endif %}
+ 
+        </div>
+      </ul>
     <!--Add a dealer table here -->
 
     </body>

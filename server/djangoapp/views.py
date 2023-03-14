@@ -52,3 +52,11 @@ def get_dealerships(request):
 # def add_review(request, dealer_id):
 # ...
 
+def renderMyTemplate(request):
+    return render(request, 'mytemplate.html')
+
+def renderAbout(request):
+    return render(request, 'djangoapp/about.html', {})
+
+def renderContact(request):
+    return render(request, 'djangoapp/contact.html', {})
